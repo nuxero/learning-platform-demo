@@ -1,9 +1,8 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import { Homework } from '../../models';
-import { ADD_HOMEWORK } from '../../data/mutation';
+import { ADD_HOMEWORK } from '../../data/mutations';
 import { GET_HOMEWORKS } from '../../data/queries';
-import { FormattedMessage } from 'react-intl';
 
 const HomeworkForm = () => {
   const [description, setDescription] = useState('');
@@ -46,7 +45,7 @@ const HomeworkForm = () => {
         }}
       >
         <label htmlFor="description">
-          <FormattedMessage id="homework.form.description" />
+          Description
         </label>
         <input
           type="text"
@@ -56,7 +55,7 @@ const HomeworkForm = () => {
         />
 
         <button type="submit">
-          <FormattedMessage id="homework.form.submit" />
+          Submit
         </button>
       </form>
     </>

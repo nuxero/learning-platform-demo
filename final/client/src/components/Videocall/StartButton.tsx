@@ -1,8 +1,7 @@
 import { useMutation } from '@apollo/client';
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { useHistory } from 'react-router-dom';
-import { START_VIDEOCALL_SESSION } from '../../data/mutation';
+import { START_VIDEOCALL_SESSION } from '../../data/mutations';
 import { GET_START_CALL_SETTINGS } from '../../data/queries';
 
 const startCallButton = {
@@ -38,7 +37,7 @@ const StartButton = () => {
           startSession();
         }}
       >
-        <FormattedMessage id="call.dashboard.start_call" />
+        Start Call
       </button>
     </div>
   );

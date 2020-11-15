@@ -1,5 +1,5 @@
 {
-  "name": "plataforma-educativa-app",
+  "name": "learning-platform-app",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8383",

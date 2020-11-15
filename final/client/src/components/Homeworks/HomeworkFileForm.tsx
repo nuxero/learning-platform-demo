@@ -3,7 +3,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import {
   ADD_HOMEWORK_FILE,
   PRESIGN_HOMEWORK_FILE_UPLOAD,
-} from '../../data/mutation';
+} from '../../data/mutations';
 import { GET_HOMEWORK } from '../../data/queries';
 import { Homework } from '../../models';
 

@@ -1,6 +1,6 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
-import { VERIFY_REQUEST, CHECK_CODE } from '../../data/mutation';
+import { VERIFY_REQUEST, CHECK_CODE } from '../../data/mutations';
 
 const PasswordlessLogin = ({
   onLogin,

@@ -1,7 +1,6 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { ADD_STUDENT } from '../../data/mutation';
+import { ADD_STUDENT } from '../../data/mutations';
 import { GET_STUDENTS } from '../../data/queries';
 import { Student, StudentData, StudentVars } from '../../models';
 
@@ -53,7 +52,7 @@ const StudentForm = () => {
       }}
     >
       <label htmlFor="phone">
-        <FormattedMessage id="student.form.phone_number" />
+        Phone Number
       </label>
       <input
         type="text"
@@ -64,7 +63,7 @@ const StudentForm = () => {
       />
 
       <label htmlFor="firstName">
-        <FormattedMessage id="student.form.first_name" />
+        First Name
       </label>
       <input
         type="text"
@@ -75,7 +74,7 @@ const StudentForm = () => {
       />
 
       <label htmlFor="lastName">
-        <FormattedMessage id="student.form.last_name" />
+        Last Name
       </label>
       <input
         type="text"
@@ -86,7 +85,7 @@ const StudentForm = () => {
       />
 
       <button type="submit">
-        <FormattedMessage id="student.form.submit" />
+        Submit
       </button>
     </form>
   );
