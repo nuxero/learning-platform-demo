@@ -42,7 +42,7 @@ const typeDefs = gql`
   type Query {
     homeworks: [Homework]
     homework(uuid: String): Homework
-    homeworkFiles(uuid: String): [HomeworkFile]
+    homeworkFiles(uuid: String): [HomeworkFile] 
     sessionDetails(uuid: String) : SessionResponse
     students: [Student]
     student(phoneNumber: String): Student

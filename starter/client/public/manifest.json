@@ -1,0 +1,6 @@
+{
+  "short_name": "plataform-educativa-app",
+  "name": "Plataform Educativa App",
+  "start_url": "./index.html",
+  "display": "standalone"
+}
