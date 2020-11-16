@@ -1,5 +1,4 @@
 export interface Student {
-  id: number;
   phoneNumber: string;
   firstName: string;
   lastName: string;
@@ -29,13 +28,11 @@ export interface StudentListProps {
 }
 
 export interface Homework {
-  id: number;
   uuid: string;
   description: string;
 }
 
 export interface HomeworkFile {
-  id: number;
   url: string;
   student: Student;
   homework: Homework;

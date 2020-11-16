@@ -5,13 +5,9 @@ const {
 
 const saveStudent = async (_, student, __, ___) => {
   try {
-    const _student = students.push({
-      phoneNumber: student.phoneNumber,
-      firstName: student.firstName,
-      lastName: student.lastName,
-    });
+    students.push(student);
 
-    return _student;
+    return student;
   } catch (err) {
     console.error('Error while trying to create student', err);
     throw new Error(INTERNAL_ERROR);
@@ -23,7 +19,8 @@ const getStudents = (_, __, ___, ____) => {
 };
 
 const getStudent = (_, { phoneNumber }, __, ___) => {
-  return students.filter(student => student.phoneNumber === phoneNumber);
+  const [student] = students.filter(student => student.phoneNumber === phoneNumber);
+  return student;
 };
 
 module.exports = {

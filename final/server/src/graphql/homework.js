@@ -11,12 +11,13 @@ const saveHomework = async (_, { description }, __, ___) => {
   const uuid = uuidv4();
 
   try {
-    const _homework = homeworks.push({
+    const homework = {
       uuid,
-      description,
-    });
+      description
+    }
+    homeworks.push(homework);
 
-    return _homework;
+    return homework;
   } catch (err) {
     console.error('Error while trying to create homework', err);
     throw new Error(INTERNAL_ERROR);
@@ -28,7 +29,8 @@ const getHomeworks = (_, __, ___, ____) => {
 };
 
 const getHomework = (_, { uuid }, __, ___) => {
-  return homeworks.filter((homework) => homework.uuid === uuid);
+  const [homework] = homeworks.filter((homework) => homework.uuid === uuid);
+  return homework;
 };
 
 const addHomeworkFile = async (_, { url, uuid, token }, __, ___) => {
@@ -37,8 +39,9 @@ const addHomeworkFile = async (_, { url, uuid, token }, __, ___) => {
   }
 
   try {
-    const student = jwt.verify(token, accessTokenSecret);
-    const homework = homworks.filter((homework) => homework.uuid === uuid);
+    const decodedToken = jwt.verify(token, accessTokenSecret);
+    const [student] = students.filter((student) => student.phoneNumber === decodedToken.phoneNumber)
+    const [homework] = homeworks.filter((homework) => homework.uuid === uuid);
     const homeworkFile = {
       url,
       student,

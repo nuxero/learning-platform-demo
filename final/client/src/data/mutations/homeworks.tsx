@@ -3,7 +3,6 @@ import { gql } from '@apollo/client';
 export const ADD_HOMEWORK = gql`
   mutation SaveHomework($description: String!) {
     saveHomework(description: $description) {
-      id
       uuid
       description
     }
@@ -41,12 +40,10 @@ export const ADD_HOMEWORK_FILE = gql`
     addHomeworkFile(url: $url, uuid: $uuid, token: $token) {
       url
       homework {
-        id
         uuid
         description
       }
       student {
-        id
         phoneNumber
         firstName
         lastName

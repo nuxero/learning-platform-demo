@@ -1,9 +1,10 @@
 const { getVonageClient } = require('./vonage');
+const { vonageSenderNumber } = require('../../util/envs');
 
 const sendSms = (to, text) => {
   return new Promise((resolve, reject) => {
     const vonageClient = getVonageClient();
-    const from = 'Vonage APIs';
+    const from = vonageSenderNumber;
 
     vonageClient.message.sendSms(from, to, text, (err, responseData) => {
       if (err) {

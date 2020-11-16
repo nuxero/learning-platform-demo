@@ -40,7 +40,7 @@ const joinSession = async (_, { uuid }, __, ___) => {
     throw new Error(INTERNAL_ERROR);
   }
 
-  const videocall = videocalls.filter(videocall => videocall.uuid === uuid);
+  const [videocall] = videocalls.filter(videocall => videocall.uuid === uuid);
 
   initializeOpentok();
 

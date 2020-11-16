@@ -40,13 +40,13 @@ const checkCodeResolver = async (_, { requestId, code, number }, __, ___) => {
   try {
     const result = await checkCode(code, requestId);
     if (result) {
-      const student = students.filter(
+      const [student] = students.filter(
         (student) => student.phoneNumber === number
       );
 
       const token = jwt.sign(
         {
-          id: student.phoneNumber,
+          phoneNumber: student.phoneNumber,
         },
         accessTokenSecret,
         {

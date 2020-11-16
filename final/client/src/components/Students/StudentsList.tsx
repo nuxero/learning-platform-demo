@@ -23,7 +23,7 @@ const StudentsList = ({ actions = [] }: StudentListProps) => {
           <tbody>
           {data.students.map((student: Student) => {
             return (
-              <tr key={student.id}>
+              <tr key={student.phoneNumber}>
                 <td>{student.phoneNumber}</td>
                 <td>{student.firstName}</td>
                 <td>{student.lastName}</td>

@@ -20,7 +20,7 @@ const HomeworkFileList = ({ uuid }: { uuid: string }) => {
       {data && (
         <>
           <h1>Homework Files</h1>
-          <p>{data.homeworkFiles[0].homework.description}</p>
+          <p>{data.homeworkFiles.length > 0 && data.homeworkFiles[0].homework.description}</p>
           <table>
             <thead>
               <tr>
@@ -32,7 +32,7 @@ const HomeworkFileList = ({ uuid }: { uuid: string }) => {
             <tbody>
               {data.homeworkFiles.map((homeworkFile) => {
                 return (
-                  <tr key={homeworkFile.id}>
+                  <tr key={homeworkFile.student.phoneNumber}>
                     <td>{homeworkFile.student.phoneNumber}</td>
                     <td>
                       {homeworkFile.student.firstName}

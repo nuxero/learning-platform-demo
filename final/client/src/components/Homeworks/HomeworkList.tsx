@@ -23,7 +23,7 @@ const HomeworkList = () => {
           <tbody>
             {data.homeworks.map((homework: Homework) => {
               return (
-                <tr key={homework.id}>
+                <tr key={homework.uuid}>
                   <td>
                     <Link to={`/homeworks/${homework.uuid}/list`}>
                       {homework.uuid}

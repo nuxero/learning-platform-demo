@@ -15,20 +15,17 @@ const typeDefs = gql`
   }
 
   type Student {
-    id: ID!
     phoneNumber: String!
     firstName: String!
     lastName: String!
   }
 
   type Homework {
-    id: ID!
     uuid: String!
     description: String!
   }
 
   type HomeworkFile {
-    id: ID!
     url: String!
     student: Student!
     homework: Homework!
@@ -42,12 +39,6 @@ const typeDefs = gql`
     token: String
   }
 
-  type AddHomeworkFileResponse {
-    url: String
-    homework: Homework
-    student: Student
-  }
-
   type Query {
     homeworks: [Homework]
     homework(uuid: String): Homework
@@ -59,7 +50,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addHomeworkFile(url: String!, uuid: String!, token: String!): AddHomeworkFileResponse
+    addHomeworkFile(url: String!, uuid: String!, token: String!): HomeworkFile
     checkCode(requestId: String!, code: String!, number: String!): CheckCodeResponse
     inviteStudent(phoneNumber: String!, url: String!): OperationResponse
     presignDocument(fileName: String!, isPublic: Boolean, token: String!): String!
