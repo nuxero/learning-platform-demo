@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Inicio = () => {
+const Home = () => {
   return (
     <></>
   );
 };
 
-export default Inicio;
+export default Home;

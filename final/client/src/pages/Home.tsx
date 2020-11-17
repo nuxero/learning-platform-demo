@@ -1,7 +1,7 @@
 import React from 'react';
 import { StartButton } from '../components/Videocall';
 
-const Inicio = () => {
+const Home = () => {
   return (
     <div>
       <StartButton />
@@ -9,4 +9,4 @@ const Inicio = () => {
   );
 };
 
-export default Inicio;
+export default Home;
