@@ -6,8 +6,11 @@ const {
 } = require('../services/vonage');
 const { videocalls } = require('../services/db');
 const { vonageVideoApiKey: apiKey } = require('../util/envs');
+const {
+  error_codes: { INTERNAL_ERROR, NOT_IMPLEMENTED },
+} = require('../util/constants');
 
-const startSession = async (_, __, { req, prisma }, ___) => {
+const startSession = async (_, __, ___, ____) => {
   throw new Error(NOT_IMPLEMENTED);
 };
 
