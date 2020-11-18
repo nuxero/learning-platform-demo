@@ -1,5 +1,5 @@
 const {
-  student: { saveStudent, getStudents, getStudent },
+  student: { saveStudent, getStudents },
   vonage: { inviteStudent, verifyRequestResolver, checkCodeResolver },
   homework: {
     getHomework,
@@ -15,7 +15,6 @@ const {
 const resolvers = {
   Query: {
     sessionDetails: joinSession,
-    student: getStudent,
     students: getStudents,
     homework: getHomework,
     homeworks: getHomeworks,

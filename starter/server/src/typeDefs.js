@@ -45,7 +45,6 @@ const typeDefs = gql`
     homeworkFiles(uuid: String): [HomeworkFile] 
     sessionDetails(uuid: String) : SessionResponse
     students: [Student]
-    student(phoneNumber: String): Student
   }
 
   type Mutation {

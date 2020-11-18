@@ -18,13 +18,7 @@ const getStudents = (_, __, ___, ____) => {
   return students;
 };
 
-const getStudent = (_, { phoneNumber }, __, ___) => {
-  const [student] = students.filter(student => student.phoneNumber === phoneNumber);
-  return student;
-};
-
 module.exports = {
   saveStudent,
-  getStudent,
   getStudents
 };
