@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Inicio from './Home';
+import Home from './Home';
 import VideoSession from './VideoSession';
 import StudentPage from './StudentPage';
 import HomeworksPage from './HomeworksPage';
@@ -18,7 +18,7 @@ function Pages() {
         <Route path="/homeworks" exact component={HomeworksPage} />
         <Route path="/homeworks/:uuid/upload" exact component={AddHomeworkFilePage} />
         <Route path="/homeworks/:uuid/list" exact component={ListHomeworkFilesPage} />
-        <Route path="/" exact component={Inicio} />
+        <Route path="/" exact component={Home} />
       </div>
     </Router>
   );
